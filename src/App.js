@@ -28,7 +28,6 @@ function App() {
     <Header isAuthenticated={isAuthenticated}/>
     <Routes>
       {/* Public Routes */}
-      <Route path="/" element={< About/>}/>
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
       <Route path="/about" element={<About />} />
@@ -36,6 +35,7 @@ function App() {
       <Route path="*" element={<Navigate to="/login" />} />
       {/* Protected Routes */}
       <Route element={<ProtectedRoute/>}>
+        <Route path="/" element={< TaskList/>}/>
         <Route path="/tasks" element={<TaskList />} />
         <Route path="/task/create" element={<CreateTask/>}/>
         <Route path="/task/edit/:id" element={<EditTask/>}/>

@@ -28,7 +28,7 @@ function App() {
     <Header isAuthenticated={isAuthenticated}/>
     <Routes>
       {/* Public Routes */}
-      <Route path="/" element={< TaskList/>}/>
+      <Route path="/" element={< About/>}/>
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
       <Route path="/about" element={<About />} />
